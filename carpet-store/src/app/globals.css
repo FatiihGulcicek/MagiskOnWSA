@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  /* Terracotta */
+  --color-terracotta-50: #fdf4f0;
+  --color-terracotta-100: #fbe5d8;
+  --color-terracotta-200: #f7cab0;
+  --color-terracotta-300: #f0a47e;
+  --color-terracotta-400: #e87549;
+  --color-terracotta-500: #d4522a;
+  --color-terracotta-600: #b8401f;
+  --color-terracotta-700: #94321a;
+  --color-terracotta-800: #792b1c;
+  --color-terracotta-900: #65261c;
+  --color-terracotta-950: #371009;
+
+  /* Gold */
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
+
+  /* Cream */
+  --color-cream-50: #fefdfb;
+  --color-cream-100: #fdf9f3;
+  --color-cream-200: #faf2e4;
+  --color-cream-300: #f5e6cc;
+  --color-cream-400: #edd5ac;
+  --color-cream-500: #e2bf84;
+  --color-cream-600: #d4a55e;
+  --color-cream-700: #b8874a;
+  --color-cream-800: #956d3e;
+  --color-cream-900: #795836;
+  --color-cream-950: #412e1b;
+
+  /* Obsidian */
+  --color-obsidian-50: #f6f6f5;
+  --color-obsidian-100: #e8e7e4;
+  --color-obsidian-200: #d2cfca;
+  --color-obsidian-300: #b3afa7;
+  --color-obsidian-400: #908980;
+  --color-obsidian-500: #756e64;
+  --color-obsidian-600: #625d54;
+  --color-obsidian-700: #524e47;
+  --color-obsidian-800: #47433d;
+  --color-obsidian-900: #3e3a35;
+  --color-obsidian-950: #18171a;
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-luxury: 0 25px 60px -12px rgba(0,0,0,0.25);
+  --shadow-luxury-sm: 0 8px 30px -4px rgba(0,0,0,0.15);
+  --shadow-card: 0 4px 24px -2px rgba(0,0,0,0.08), 0 2px 8px -2px rgba(0,0,0,0.05);
+  --shadow-card-hover: 0 20px 48px -8px rgba(0,0,0,0.18), 0 8px 16px -4px rgba(0,0,0,0.08);
+
+  /* Animations */
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fade-up: fadeUp 0.7s ease-out forwards;
+  --animate-shimmer: shimmer 1.5s infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-16px); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Base styles */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #fefdfb;
+  color: #1a1614;
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f5f0ea; }
+::-webkit-scrollbar-thumb { background: #d4a55e; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #b8874a; }
+
+::selection { background: rgba(212,82,42,0.2); color: #d4522a; }
+
+/* Utility classes */
+@utility text-gradient {
+  background: linear-gradient(135deg, #d4522a 0%, #d97706 60%, #b8401f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility text-gradient-gold {
+  background: linear-gradient(135deg, #b45309 0%, #fbbf24 50%, #b45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+@utility heading-display {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+@utility animate-marquee {
+  animation: var(--animate-marquee);
+}
+
+@utility animate-float {
+  animation: var(--animate-float);
+}
+
+@utility animate-fade-up {
+  animation: var(--animate-fade-up);
+}
+
+@utility skeleton {
+  background: linear-gradient(90deg, #f0e9de 25%, #e8ddd0 50%, #f0e9de 75%);
+  background-size: 200% 100%;
+  animation: var(--animate-shimmer);
+}
+
+@utility btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-terracotta-500);
+  color: white;
+  font-weight: 500;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 8px 30px -4px rgba(212,82,42,0.4);
+  text-decoration: none;
+  &:hover {
+    background-color: var(--color-terracotta-600);
+    box-shadow: 0 20px 48px -8px rgba(212,82,42,0.5);
+  }
+  &:active { transform: scale(0.97); }
+}
+
+@utility btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border: 2px solid var(--color-terracotta-500);
+  color: var(--color-terracotta-500);
+  font-weight: 500;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: transparent;
+  text-decoration: none;
+  &:hover { background-color: var(--color-terracotta-50); }
+  &:active { transform: scale(0.97); }
+}
+
+@utility card-luxury {
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--color-cream-200);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.5s, transform 0.5s;
+  &:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+  }
+}
+
+@utility input-luxury {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-cream-50);
+  border: 1px solid var(--color-cream-300);
+  border-radius: 0.75rem;
+  color: var(--color-obsidian-900);
+  &::placeholder { color: var(--color-obsidian-400); }
+  &:focus { outline: none; border-color: var(--color-terracotta-400); box-shadow: 0 0 0 3px rgba(212,82,42,0.1); }
+  transition: all 0.2s;
+}
+
+@utility tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+@utility ornament {
+  &::before { content: '❖'; color: var(--color-gold-600); font-size: 0.625rem; vertical-align: middle; margin-right: 0.5rem; }
+  &::after { content: '❖'; color: var(--color-gold-600); font-size: 0.625rem; vertical-align: middle; margin-left: 0.5rem; }
+}
