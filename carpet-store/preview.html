@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANADOLU — El Dokuma Halı & Kilim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --terra:#d4522a;--terra-dark:#b8401f;--terra-light:#fdf4f0;
+  --gold:#d97706;--gold-light:#fbbf24;
+  --cream:#fefdfb;--cream-2:#fdf9f3;--cream-3:#f5e6cc;
+  --obs:#18171a;--obs-2:#3e3a35;--obs-3:#756e64;--obs-4:#b3afa7;
+  --white:#ffffff;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--obs);overflow-x:hidden}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+::selection{background:rgba(212,82,42,.2);color:var(--terra)}
+
+/* TOPBAR */
+.topbar{background:var(--obs);color:#b3afa7;font-size:11px;padding:8px 24px;display:flex;justify-content:space-between;align-items:center}
+.topbar span{display:flex;align-items:center;gap:6px}
+
+/* NAVBAR */
+nav{position:sticky;top:0;z-index:100;background:rgba(254,253,251,.95);backdrop-filter:blur(20px);border-bottom:1px solid #f5e6cc;padding:0 24px}
+.nav-inner{max-width:1280px;margin:0 auto;height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-icon{width:40px;height:40px;position:relative;flex-shrink:0}
+.logo-icon-bg1{position:absolute;inset:0;background:var(--terra);border-radius:10px;transform:rotate(3deg)}
+.logo-icon-bg2{position:absolute;inset:0;background:var(--terra-dark);border-radius:10px;transform:rotate(-3deg);opacity:.6}
+.logo-icon-text{position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:100%;color:#fff;font-family:'Playfair Display',serif;font-weight:700;font-size:18px}
+.logo-name{font-family:'Playfair Display',serif;font-weight:700;font-size:20px;color:var(--obs);letter-spacing:-.02em}
+.logo-sub{font-size:9px;letter-spacing:.2em;color:var(--terra);text-transform:uppercase;margin-top:-2px}
+.nav-links{display:flex;gap:4px}
+.nav-links a{padding:10px 16px;font-size:14px;font-weight:500;color:#524e47;text-decoration:none;border-radius:999px;transition:all .2s}
+.nav-links a:hover{color:var(--terra);background:#fdf9f3}
+.nav-right{display:flex;align-items:center;gap:8px}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:10px 20px;background:var(--terra);color:#fff;border:none;border-radius:999px;font-size:13px;font-weight:500;cursor:pointer;box-shadow:0 4px 16px -4px rgba(212,82,42,.5);transition:all .2s;text-decoration:none}
+.nav-btn:hover{background:var(--terra-dark)}
+.badge{position:absolute;top:-4px;right:-4px;width:18px;height:18px;background:var(--gold);border-radius:999px;font-size:10px;font-weight:700;color:#fff;display:flex;align-items:center;justify-content:center}
+.nav-icon-btn{position:relative;padding:10px;border:none;background:none;cursor:pointer;color:#524e47;border-radius:999px;transition:all .2s;font-size:18px;line-height:1}
+.nav-icon-btn:hover{background:#fdf9f3;color:var(--terra)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:#1a1614}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80');background-size:cover;background-position:center;transform:scale(1.05);animation:heroZoom 12s ease-out forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(24,23,26,.88) 0%,rgba(24,23,26,.55) 55%,rgba(24,23,26,.15) 100%)}
+.hero-overlay2{position:absolute;inset:0;background:linear-gradient(to top,rgba(24,23,26,.5) 0%,transparent 40%)}
+.hero-content{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:0 24px;width:100%;display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;margin-bottom:28px;animation:fadeUp .6s ease both}
+.hero-badge span{font-size:11px;font-weight:500;color:#e8e7e4;letter-spacing:.15em;text-transform:uppercase}
+.hero-badge-dot{width:6px;height:6px;background:var(--gold-light);border-radius:999px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.7;transform:scale(1.3)}}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(48px,7vw,80px);font-weight:800;color:#fff;line-height:1.08;letter-spacing:-.02em;margin-bottom:24px;animation:fadeUp .7s .1s ease both}
+.hero-title .line2{display:block;font-style:italic;font-weight:400;color:#e8ddd0;font-size:.85em}
+.hero-title .accent{background:linear-gradient(135deg,#d97706,#fbbf24,#d97706);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-title .underline-wrap{position:relative;display:inline-block}
+.hero-title .underline-wrap svg{position:absolute;bottom:-6px;left:0;width:100%}
+.hero-desc{font-size:17px;color:#b3afa7;line-height:1.7;max-width:520px;margin-bottom:36px;animation:fadeUp .7s .2s ease both}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .7s .3s ease both}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;background:var(--terra);color:#fff;border:none;border-radius:999px;font-size:15px;font-weight:600;cursor:pointer;text-decoration:none;box-shadow:0 8px 32px -4px rgba(212,82,42,.5);transition:all .3s}
+.btn-primary:hover{background:var(--terra-dark);transform:translateY(-2px);box-shadow:0 16px 40px -4px rgba(212,82,42,.55)}
+.btn-primary svg{transition:transform .2s}
+.btn-primary:hover svg{transform:translateX(3px)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.25);color:#fff;border-radius:999px;font-size:15px;font-weight:500;cursor:pointer;text-decoration:none;transition:all .2s;backdrop-filter:blur(8px)}
+.btn-outline:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.5)}
+.hero-trust{display:flex;align-items:center;gap:16px;margin-top:36px;animation:fadeUp .7s .4s ease both}
+.hero-avatars{display:flex}
+.hero-avatars img{width:34px;height:34px;border-radius:999px;border:2px solid #fff;margin-left:-8px;object-fit:cover}
+.hero-avatars img:first-child{margin-left:0}
+.hero-stars{display:flex;gap:2px;margin-bottom:3px}
+.star{color:#fbbf24;font-size:13px}
+.hero-trust-text{font-size:11px;color:#908980}
+.hero-trust-text strong{color:#e8e7e4;font-weight:500}
+
+/* HERO CARD */
+.hero-card{background:rgba(255,255,255,.08);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.18);border-radius:28px;padding:28px;animation:fadeLeft .9s .3s ease both;box-shadow:0 32px 80px -16px rgba(0,0,0,.4)}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+.hero-card-header{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.hero-card-header span{font-size:13px;font-weight:500;color:#e8e7e4}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat-box{background:rgba(255,255,255,.08);border-radius:16px;padding:18px;text-align:center}
+.stat-num{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#fff;line-height:1}
+.stat-label{font-size:11px;color:#908980;margin-top:4px}
+.hero-card-product{margin-top:14px;padding:14px;background:rgba(212,82,42,.15);border:1px solid rgba(212,82,42,.25);border-radius:18px;display:flex;align-items:center;gap:12px}
+.hero-card-product img{width:48px;height:48px;border-radius:12px;object-fit:cover}
+.hcp-info{flex:1}
+.hcp-name{font-size:13px;font-weight:600;color:#fff}
+.hcp-sub{font-size:11px;color:#908980}
+.hcp-price{text-align:right}
+.hcp-try{font-size:13px;font-weight:700;color:#fbbf24}
+.hcp-usd{font-size:10px;color:#908980}
+.live-dot{display:flex;align-items:center;gap:5px}
+.live-dot span{width:7px;height:7px;background:#22c55e;border-radius:999px;display:inline-block;animation:pulse 1.5s infinite}
+.live-dot em{font-size:11px;font-style:normal;color:#fff;font-weight:500}
+.float-badge{position:absolute;top:-14px;right:-14px;background:var(--gold);color:var(--obs);border-radius:16px;padding:8px 14px;font-size:11px;font-weight:700;box-shadow:0 4px 16px rgba(217,119,6,.4);animation:floatAnim 3s ease-in-out infinite}
+@keyframes floatAnim{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero-card-wrap{position:relative}
+.hero-bottom{position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to top,var(--cream),transparent)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+/* MARQUEE */
+.marquee-section{background:var(--terra);padding:14px 0;overflow:hidden}
+.marquee-track{display:flex;animation:marquee 28s linear infinite;white-space:nowrap;width:max-content}
+.marquee-item{padding:0 20px;font-size:13px;font-weight:600;color:#fff;letter-spacing:.12em;text-transform:uppercase}
+.marquee-sep{color:rgba(255,255,255,.4);font-size:10px;padding:0 4px}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* TRUST BADGES */
+.trust{padding:48px 24px;background:#fdf9f3;border-top:1px solid #f5e6cc;border-bottom:1px solid #f5e6cc}
+.trust-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.trust-item{display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px 12px;border-radius:20px;transition:all .3s;cursor:default}
+.trust-item:hover{background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.07)}
+.trust-icon{width:44px;height:44px;background:#fdf4f0;border:1px solid #fbe5d8;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.trust-title{font-size:11px;font-weight:700;color:#3e3a35;text-align:center;line-height:1.3}
+.trust-desc{font-size:10px;color:#908980;text-align:center;line-height:1.4}
+
+/* SECTION HEADER */
+.section-tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;color:var(--terra);text-transform:uppercase;letter-spacing:.2em;margin-bottom:14px}
+.section-tag::before,.section-tag::after{content:'❖';color:var(--gold);font-size:9px}
+.section-h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:800;color:var(--obs);line-height:1.15;letter-spacing:-.02em}
+.section-h2 .italic{font-style:italic;font-weight:400}
+.text-terra{background:linear-gradient(135deg,#d4522a,#d97706,#b8401f);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.text-gold{background:linear-gradient(135deg,#b45309,#fbbf24,#b45309);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section-desc{color:#756e64;line-height:1.7;font-size:15px}
+
+/* PRODUCTS */
+.products-section{padding:80px 24px;background:var(--cream)}
+.products-section .inner{max-width:1280px;margin:0 auto}
+.section-top{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;gap:20px}
+.see-all{font-size:13px;font-weight:600;color:var(--terra);text-decoration:none;display:flex;align-items:center;gap:4px;transition:gap .2s}
+.see-all:hover{gap:8px}
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
+.filter-btn{padding:9px 20px;border-radius:999px;font-size:13px;font-weight:500;cursor:pointer;border:none;transition:all .2s}
+.filter-btn.active{background:var(--terra);color:#fff;box-shadow:0 4px 14px rgba(212,82,42,.4)}
+.filter-btn:not(.active){background:#fdf9f3;color:#524e47}
+.filter-btn:not(.active):hover{background:#f5e6cc}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.product-card{background:#fff;border-radius:24px;overflow:hidden;border:1px solid #faf2e4;box-shadow:0 4px 20px rgba(0,0,0,.06);transition:all .45s;cursor:pointer}
+.product-card:hover{box-shadow:0 20px 50px rgba(0,0,0,.14);transform:translateY(-4px)}
+.product-img-wrap{position:relative;aspect-ratio:4/3;overflow:hidden;background:#fdf9f3}
+.product-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.product-card:hover .product-img-wrap img{transform:scale(1.08)}
+.product-overlay{position:absolute;inset:0;background:rgba(24,23,26,0);transition:background .4s;display:flex;align-items:flex-end;padding:14px}
+.product-card:hover .product-overlay{background:rgba(24,23,26,.38)}
+.product-add{width:100%;padding:11px;background:rgba(255,255,255,.95);border:none;border-radius:14px;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transform:translateY(12px);opacity:0;transition:all .3s;color:var(--obs)}
+.product-card:hover .product-add{transform:translateY(0);opacity:1}
+.product-badges{position:absolute;top:12px;left:12px;display:flex;flex-direction:column;gap:6px}
+.badge-pill{padding:4px 10px;border-radius:999px;font-size:10px;font-weight:700}
+.badge-new{background:var(--gold);color:var(--obs)}
+.badge-feat{background:var(--obs);color:#fff}
+.badge-vintage{background:#faf2e4;color:#3e3a35}
+.like-btn{position:absolute;top:12px;right:12px;width:36px;height:36px;background:rgba(255,255,255,.9);border-radius:999px;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;font-size:16px;transition:all .2s;backdrop-filter:blur(8px)}
+.like-btn:hover{background:#fff;transform:scale(1.1)}
+.like-btn.liked{background:var(--terra);color:#fff}
+.product-body{padding:18px}
+.product-meta{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.product-cat{padding:3px 10px;background:#fdf4f0;color:var(--terra);border-radius:999px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.product-origin{font-size:10px;color:#908980;display:flex;align-items:center;gap:3px}
+.product-name{font-family:'Playfair Display',serif;font-weight:700;font-size:16px;color:var(--obs);margin-bottom:6px;line-height:1.3;transition:color .2s}
+.product-card:hover .product-name{color:var(--terra)}
+.product-dim{font-size:11px;color:#908980;margin-bottom:12px;display:flex;align-items:center;gap:4px}
+.product-mats{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px}
+.mat-tag{padding:3px 10px;background:#fdf9f3;border:1px solid #f5e6cc;border-radius:999px;font-size:10px;color:#756e64}
+.product-footer{display:flex;align-items:center;justify-content:space-between}
+.price-try{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--terra);line-height:1}
+.price-usd{font-size:11px;color:#908980;margin-top:1px}
+.color-dots{display:flex;gap:4px}
+.cdot{width:16px;height:16px;border-radius:999px;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.1)}
+
+/* CRAFT */
+.craft{padding:80px 24px;background:var(--obs);position:relative;overflow:hidden}
+.craft-glow1{position:absolute;top:-100px;left:20%;width:400px;height:400px;background:rgba(212,82,42,.08);border-radius:999px;filter:blur(80px);pointer-events:none}
+.craft-glow2{position:absolute;bottom:-100px;right:20%;width:400px;height:400px;background:rgba(217,119,6,.06);border-radius:999px;filter:blur:80px;pointer-events:none}
+.craft-inner{max-width:1280px;margin:0 auto;position:relative}
+.craft-head{text-align:center;max-width:600px;margin:0 auto 56px}
+.craft-head .section-tag{justify-content:center}
+.craft-head .section-h2{color:#fff}
+.craft-head .section-desc{color:#756e64}
+.craft-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#b3afa7;margin-top:14px}
+.craft-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.craft-card{background:#3e3a35;border-radius:24px;padding:26px;border:1px solid rgba(255,255,255,.06);transition:all .3s;position:relative}
+.craft-card:hover{background:#47433d;border-color:rgba(255,255,255,.12);transform:translateY(-2px)}
+.craft-num{position:absolute;top:-12px;left:-10px;width:36px;height:36px;background:var(--obs);border:1px solid #47433d;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--terra)}
+.craft-emoji{width:48px;height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px}
+.craft-title{font-family:'Playfair Display',serif;font-weight:700;font-size:17px;color:#fff;margin-bottom:8px}
+.craft-desc{font-size:13px;color:#756e64;line-height:1.6}
+
+/* REGIONAL */
+.regional{padding:80px 24px;background:#fdf9f3}
+.regional-inner{max-width:1280px;margin:0 auto}
+.regional-head{text-align:center;max-width:600px;margin:0 auto 50px}
+.regional-grid{display:grid;grid-template-columns:320px 1fr;gap:24px}
+.region-list{display:flex;flex-direction:column;gap:8px}
+.region-btn{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:18px;border:1px solid transparent;cursor:pointer;text-align:left;background:transparent;transition:all .25s;width:100%}
+.region-btn.active{background:#fff;border-color:#f5e6cc;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.region-dot{width:12px;height:12px;border-radius:999px;flex-shrink:0}
+.region-name{font-family:'Playfair Display',serif;font-weight:700;color:var(--obs);font-size:16px}
+.region-spec{font-size:11px;font-weight:600;color:#fff;padding:2px 8px;border-radius:999px;display:inline-block;margin-top:3px}
+.region-count{margin-left:auto;font-size:12px;color:#908980;flex-shrink:0}
+.region-detail{background:#fff;border-radius:24px;overflow:hidden;border:1px solid #faf2e4;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.region-img{height:240px;position:relative;overflow:hidden}
+.region-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.region-detail:hover .region-img img{transform:scale(1.05)}
+.region-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(24,23,26,.7) 0%,transparent 50%)}
+.region-img-content{position:absolute;bottom:20px;left:24px;right:24px;display:flex;align-items:flex-end;justify-content:space-between}
+.region-img-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#fff}
+.region-img-city{font-size:13px;color:#b3afa7}
+.region-body{padding:24px}
+.region-body p{font-size:14px;color:#756e64;line-height:1.7;margin-bottom:20px}
+.region-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.region-stat-box{padding:14px;background:#fdf9f3;border-radius:16px;border:1px solid #faf2e4}
+.rsb-num{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--obs)}
+.rsb-label{font-size:11px;color:#908980;margin-top:2px}
+.region-cta{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--obs);color:#fff;border-radius:999px;font-size:13px;font-weight:600;text-decoration:none;transition:all .2s;border:none;cursor:pointer}
+.region-cta:hover{background:#3e3a35}
+
+/* TESTIMONIALS */
+.testimonials{padding:80px 24px;background:var(--cream);overflow:hidden}
+.testimonials-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.test-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px}
+.test-stat{padding:16px;background:#fdf9f3;border-radius:18px;border:1px solid #faf2e4;text-align:center}
+.test-stat-num{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--terra)}
+.test-stat-label{font-size:10px;color:#908980;margin-top:3px}
+.test-card{background:#fff;border-radius:28px;padding:32px;border:1px solid #faf2e4;box-shadow:0 8px 40px rgba(0,0,0,.08)}
+.test-quote-icon{font-size:40px;color:#fbe5d8;font-family:Georgia,serif;line-height:1;margin-bottom:18px}
+.test-text{font-size:16px;color:#524e47;line-height:1.75;font-style:italic;margin-bottom:24px;font-weight:300}
+.test-footer{display:flex;align-items:center;justify-content:space-between}
+.test-author{display:flex;align-items:center;gap:14px}
+.test-author img{width:48px;height:48px;border-radius:999px;object-fit:cover;border:2px solid #faf2e4}
+.test-name{font-weight:600;color:var(--obs);font-size:14px;display:flex;align-items:center;gap:6px}
+.test-location{font-size:11px;color:#908980}
+.test-product{font-size:11px;color:var(--terra);font-weight:500;margin-top:2px}
+.test-stars{display:flex;gap:2px}
+.test-star{color:#fbbf24;font-size:14px}
+.test-nav{display:flex;align-items:center;gap:10px;margin-top:20px}
+.test-dot{height:6px;border-radius:999px;transition:all .3s;cursor:pointer;border:none}
+.test-dot.active{width:28px;background:var(--terra)}
+.test-dot:not(.active){width:6px;background:#f5e6cc}
+.test-arrows{display:flex;gap:8px;margin-left:auto}
+.test-arrow{width:40px;height:40px;border-radius:999px;border:1.5px solid #f5e6cc;background:none;cursor:pointer;font-size:16px;transition:all .2s;display:flex;align-items:center;justify-content:center}
+.test-arrow:last-child{background:var(--terra);color:#fff;border-color:var(--terra);box-shadow:0 4px 14px rgba(212,82,42,.4)}
+.test-arrow:last-child:hover{background:var(--terra-dark)}
+.test-arrow:first-child:hover{border-color:var(--terra);color:var(--terra)}
+
+/* INSTAGRAM */
+.instagram{padding:80px 24px;background:#fdf9f3}
+.instagram-inner{max-width:1280px;margin:0 auto}
+.instagram-head{text-align:center;margin-bottom:36px}
+.insta-handle{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:#524e47;margin-bottom:10px}
+.insta-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:24px}
+.insta-item{aspect-ratio:1;border-radius:18px;overflow:hidden;position:relative;cursor:pointer}
+.insta-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.insta-item:hover img{transform:scale(1.12)}
+.insta-item-overlay{position:absolute;inset:0;background:rgba(24,23,26,0);transition:background .3s;display:flex;align-items:center;justify-content:center;gap:12px}
+.insta-item:hover .insta-item-overlay{background:rgba(24,23,26,.48)}
+.insta-stat{color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;gap:4px;opacity:0;transition:opacity .25s}
+.insta-item:hover .insta-stat{opacity:1}
+.insta-follow{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border:2px solid #d2cfca;color:#524e47;border-radius:999px;font-size:13px;font-weight:500;cursor:pointer;transition:all .2s;text-decoration:none}
+.insta-follow:hover{border-color:var(--terra);color:var(--terra)}
+.insta-center{text-align:center}
+
+/* FOOTER */
+footer{background:var(--obs);color:#b3afa7}
+.footer-newsletter{border-bottom:1px solid #3e3a35;padding:56px 24px}
+.footer-nl-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.footer-nl-title{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#fff;margin-bottom:8px}
+.footer-nl-title span{background:linear-gradient(135deg,#b45309,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.footer-nl-desc{font-size:13px;color:#756e64}
+.nl-form{display:flex;gap:10px}
+.nl-input{flex:1;padding:14px 20px;background:#3e3a35;border:1px solid #524e47;border-radius:999px;color:#fff;font-size:13px;outline:none;transition:border-color .2s}
+.nl-input::placeholder{color:#756e64}
+.nl-input:focus{border-color:var(--terra)}
+.nl-btn{display:flex;align-items:center;gap:6px;padding:14px 24px;background:var(--terra);color:#fff;border:none;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .2s}
+.nl-btn:hover{background:var(--terra-dark)}
+.footer-main{padding:56px 24px}
+.footer-main-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:240px 1fr 1fr 240px;gap:48px}
+.footer-logo-name{font-family:'Playfair Display',serif;font-weight:700;font-size:20px;color:#fff}
+.footer-logo-sub{font-size:9px;letter-spacing:.2em;color:var(--terra);text-transform:uppercase}
+.footer-desc{font-size:13px;color:#756e64;line-height:1.7;margin:16px 0 20px}
+.footer-socials{display:flex;gap:8px}
+.social-btn{width:36px;height:36px;background:#3e3a35;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;border:none;transition:background .2s;text-decoration:none}
+.social-btn:hover{background:var(--terra)}
+.footer-col-title{font-size:11px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.15em;margin-bottom:18px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:#756e64;text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--terra)}
+.contact-item{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:#756e64;margin-bottom:12px}
+.contact-icon{color:var(--terra);flex-shrink:0;margin-top:1px}
+.store-hours{margin-top:16px;padding:14px;background:#3e3a35;border-radius:16px}
+.store-hours-label{font-size:10px;color:#756e64;margin-bottom:4px}
+.store-hours-time{font-size:12px;color:#b3afa7}
+.footer-bottom{border-top:1px solid #3e3a35;padding:18px 24px}
+.footer-bottom-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.footer-copy{font-size:11px;color:#756e64}
+.footer-flags{font-size:12px;color:#756e64;display:flex;gap:12px;align-items:center}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-content{grid-template-columns:1fr;gap:0}
+  .hero-card-wrap{display:none}
+  .trust-inner{grid-template-columns:repeat(3,1fr)}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .craft-grid{grid-template-columns:repeat(2,1fr)}
+  .regional-grid{grid-template-columns:1fr}
+  .testimonials-inner{grid-template-columns:1fr}
+  .insta-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-main-inner{grid-template-columns:1fr 1fr;row-gap:32px}
+  .footer-nl-inner{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .topbar{display:none}
+  .nav-links{display:none}
+  .trust-inner{grid-template-columns:repeat(2,1fr)}
+  .product-grid{grid-template-columns:1fr}
+  .craft-grid{grid-template-columns:1fr}
+  .insta-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-main-inner{grid-template-columns:1fr}
+  .footer-nl-inner{grid-template-columns:1fr}
+  .nl-form{flex-direction:column}
+}
+
+/* SCROLL ANIMATIONS */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+.reveal-delay-5{transition-delay:.5s}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>📞 +90 212 555 0100</span>
+  <span>❖ &nbsp; Türkiye ve Dünya Geneline Kargo &nbsp; ❖</span>
+  <span>Instagram &nbsp;·&nbsp; Facebook</span>
+</div>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <div class="logo-icon-bg1"></div>
+        <div class="logo-icon-bg2"></div>
+        <div class="logo-icon-text">A</div>
+      </div>
+      <div>
+        <div class="logo-name">ANADOLU</div>
+        <div class="logo-sub">El Dokuma Halı</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#products">Koleksiyon</a>
+      <a href="#regional">Bölgesel</a>
+      <a href="#craft">Zanaat</a>
+      <a href="#contact">İletişim</a>
+    </div>
+    <div class="nav-right">
+      <button class="nav-icon-btn" title="Arama">🔍</button>
+      <button class="nav-icon-btn" title="Favoriler">🤍</button>
+      <a href="#" class="nav-btn" style="position:relative">
+        🛍️ Sepet
+        <span class="badge">2</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay2"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span>UNESCO Yaşayan Miras Zanaatı</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-line1">Yüzyıllık <span class="accent"><span class="underline-wrap">Ustalık<svg viewBox="0 0 200 8" fill="none" style="height:10px"><path d="M2 6C50 2 100 2 198 6" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/></svg></span></span>,</span>
+        <span class="line2">Modern Estetik</span>
+      </h1>
+      <p class="hero-desc">Anadolu'nun dört köşesinden getirilen yünler, doğal boyalar ve nesiller boyu aktarılan tekniklerle dokunmuş eşsiz el halıları. Her parça bir sanat eseri.</p>
+      <div class="hero-cta">
+        <a href="#products" class="btn-primary">
+          Koleksiyonu Keşfet
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#craft" class="btn-outline">Hikayemiz</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-avatars">
+          <img src="https://i.pravatar.cc/40?img=1" alt="">
+          <img src="https://i.pravatar.cc/40?img=2" alt="">
+          <img src="https://i.pravatar.cc/40?img=3" alt="">
+          <img src="https://i.pravatar.cc/40?img=4" alt="">
+        </div>
+        <div>
+          <div class="hero-stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <div class="hero-trust-text"><strong>4.9</strong> — 850+ müşteri yorumu</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card-wrap">
+      <div class="float-badge">🌟 Yeni Koleksiyon<br><small style="font-weight:400">Sonbahar 2024</small></div>
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <span style="font-size:16px">🌍</span>
+          <span>Dünyaya Ulaşıyoruz</span>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-box"><div class="stat-num">25+</div><div class="stat-label">Yıllık Deneyim</div></div>
+          <div class="stat-box"><div class="stat-num">2,400+</div><div class="stat-label">Parça Koleksiyon</div></div>
+          <div class="stat-box"><div class="stat-num">68</div><div class="stat-label">Ülkeye İhracat</div></div>
+          <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label">El Yapımı</div></div>
+        </div>
+        <div class="hero-card-product">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=100&q=70" alt="">
+          <div class="hcp-info">
+            <div class="hcp-name">Anadolu Kilim</div>
+            <div class="live-dot"><span></span><em>Konya Kökenli</em></div>
+          </div>
+          <div class="hcp-price">
+            <div class="hcp-try">₺8.500</div>
+            <div class="hcp-usd">≈ $280</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-bottom"></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marquee">
+    <span class="marquee-item">El Dokuma Kilim</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Hereke İpek</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Uşak Halısı</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Kapadokya Cicim</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Osmanlı Motifi</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Doğal Boyama</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Yün & İpek</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Anadolu Deseni</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">El Sanatı</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Türk Düğümü</span><span class="marquee-sep">❖</span>
+    <!-- duplicate -->
+    <span class="marquee-item">El Dokuma Kilim</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Hereke İpek</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Uşak Halısı</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Kapadokya Cicim</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Osmanlı Motifi</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Doğal Boyama</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Yün & İpek</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Anadolu Deseni</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">El Sanatı</span><span class="marquee-sep">❖</span>
+    <span class="marquee-item">Türk Düğümü</span><span class="marquee-sep">❖</span>
+  </div>
+</div>
+
+<!-- TRUST BADGES -->
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-item reveal"><div class="trust-icon">🛡️</div><div class="trust-title">%100 Orijinallik Garantisi</div><div class="trust-desc">Her ürün belgelenmiş özgün el yapımı</div></div>
+    <div class="trust-item reveal reveal-delay-1"><div class="trust-icon">🚚</div><div class="trust-title">Dünyaya Ücretsiz Kargo</div><div class="trust-desc">₺5.000 üzeri siparişlerde ücretsiz</div></div>
+    <div class="trust-item reveal reveal-delay-2"><div class="trust-icon">🔄</div><div class="trust-title">30 Gün İade</div><div class="trust-desc">Memnun kalmazsan sorunsuz iade</div></div>
+    <div class="trust-item reveal reveal-delay-3"><div class="trust-icon">🎧</div><div class="trust-title">Uzman Danışmanlık</div><div class="trust-desc">Uzman ekibimiz seçiminde yardımcı</div></div>
+    <div class="trust-item reveal reveal-delay-4"><div class="trust-icon">🏆</div><div class="trust-title">Ödüllü Zanaat</div><div class="trust-desc">UNESCO tescilli el sanatları</div></div>
+    <div class="trust-item reveal reveal-delay-5"><div class="trust-icon">🔒</div><div class="trust-title">Güvenli Ödeme</div><div class="trust-desc">256-bit SSL şifreli alışveriş</div></div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
+  <div class="inner">
+    <div class="section-top">
+      <div>
+        <div class="section-tag">Seçkin Parçalar</div>
+        <h2 class="section-h2">Öne Çıkan <span class="text-terra italic font-normal">Koleksiyon</span></h2>
+      </div>
+      <a href="#" class="see-all">Tümünü Gör →</a>
+    </div>
+    <div class="filter-row">
+      <button class="filter-btn active" onclick="filterProducts(this,'all')">Tümü</button>
+      <button class="filter-btn" onclick="filterProducts(this,'kilim')">Kilim</button>
+      <button class="filter-btn" onclick="filterProducts(this,'hali')">El Halısı</button>
+      <button class="filter-btn" onclick="filterProducts(this,'runner')">Runner</button>
+      <button class="filter-btn" onclick="filterProducts(this,'cushion')">Yastık</button>
+      <button class="filter-btn" onclick="filterProducts(this,'vintage')">Vintage</button>
+    </div>
+    <div class="product-grid" id="product-grid">
+
+      <div class="product-card reveal" data-cat="kilim">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Anadolu Kilim">
+          <div class="product-overlay">
+            <button class="product-add" onclick="addToCart(this)">🛍️ Sepete Ekle</button>
+          </div>
+          <div class="product-badges"><span class="badge-pill badge-feat">Öne Çıkan</span></div>
+          <button class="like-btn" onclick="toggleLike(this)">🤍</button>
+        </div>
+        <div class="product-body">
+          <div class="product-meta">
+            <span class="product-cat">Kilim</span>
+            <span class="product-origin">📍 İç Anadolu</span>
+          </div>
+          <div class="product-name">Anadolu Kilim — Geleneksel Motifler</div>
+          <div class="product-dim">📏 150 × 210 cm</div>
+          <div class="product-mats"><span class="mat-tag">Yün</span><span class="mat-tag">Doğal Boya</span></div>
+          <div class="product-footer">
+            <div>
+              <div class="price-try">₺8.500</div>
+              <div class="price-usd">≈ $280</div>
+            </div>
+            <div class="color-dots">
+              <div class="cdot" style="background:#e87549" title="Terracotta"></div>
+              <div class="cdot" style="background:#f5e6cc" title="Krem"></div>
+              <div class="cdot" style="background:#3840d4" title="Kobalt"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-1" data-cat="hali">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1588362951121-3ee319b018b2?w=600&q=80" alt="Uşak Halısı">
+          <div class="product-overlay">
+            <button class="product-add" onclick="addToCart(this)">🛍️ Sepete Ekle</button>
+          </div>
+          <div class="product-badges"><span class="badge-pill badge-feat">Öne Çıkan</span></div>
+          <button class="like-btn" onclick="toggleLike(this)">🤍</button>
+        </div>
+        <div class="product-body">
+          <div class="product-meta">
+            <span class="product-cat">El Halısı</span>
+            <span class="product-origin">📍 Ege</span>
+          </div>
+          <div class="product-name">Uşak Halısı — Antik Desen</div>
+          <div class="product-dim">📏 200 × 290 cm</div>
+          <div class="product-mats"><span class="mat-tag">Merino Yün</span><span class="mat-tag">İpek Detay</span></div>
+          <div class="product-footer">
+            <div>
+              <div class="price-try">₺24.000</div>
+              <div class="price-usd">≈ $790</div>
+            </div>
+            <div class="color-dots">
+              <div class="cdot" style="background:#fbbf24" title="Altın"></div>
+              <div class="cdot" style="background:#f5f0ea" title="Fil Dişi"></div>
+              <div class="cdot" style="background:#dc2626" title="Kırmızı"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-2" data-cat="hali">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Hereke İpek">
+          <div class="product-overlay">
+            <button class="product-add" onclick="addToCart(this)">🛍️ Sepete Ekle</button>
+          </div>
+          <div class="product-badges"><span class="badge-pill badge-feat">Öne Çıkan</span></div>
+          <button class="like-btn" onclick="toggleLike(this)">🤍</button>
+        </div>
+        <div class="product-body">
+          <div class="product-meta">
+            <span class="product-cat">El Halısı</span>
+            <span class="product-origin">📍 Marmara</span>
+          </div>
+          <div class="product-name">Hereke İpek Halısı</div>
+          <div class="product-dim">📏 120 × 180 cm</div>
+          <div class="product-mats"><span class="mat-tag">Saf İpek</span><span class="mat-tag">Altın Tel</span></div>
+          <div class="product-footer">
+            <div>
+              <div class="price-try">₺85.000</div>
+              <div class="price-usd">≈ $2.800</div>
+            </div>
+            <div class="color-dots">
+              <div class="cdot" style="background:#1e2266" title="Navi"></div>
+              <div class="cdot" style="background:#fbbf24" title="Altın"></div>
+              <div class="cdot" style="background:#dc2626" title="Kırmızı"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-3" data-cat="runner">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1567225591450-06036b3392a6?w=600&q=80" alt="Runner Kilim">
+          <div class="product-overlay">
+            <button class="product-add" onclick="addToCart(this)">🛍️ Sepete Ekle</button>
+          </div>
+          <div class="product-badges"><span class="badge-pill badge-new">Yeni</span></div>
+          <button class="like-btn" onclick="toggleLike(this)">🤍</button>
+        </div>
+        <div class="product-body">
+          <div class="product-meta">
+            <span class="product-cat">Runner</span>
+            <span class="product-origin">📍 İç Anadolu</span>
+          </div>
+          <div class="product-name">Kapadokya Runner Kilim</div>
+          <div class="product-dim">📏 80 × 300 cm</div>
+          <div class="product-mats"><span class="mat-tag">Yün</span><span class="mat-tag">Pamuk</span></div>
+          <div class="product-footer">
+            <div>
+              <div class="price-try">₺4.200</div>
+              <div class="price-usd">≈ $138</div>
+            </div>
+            <div class="color-dots">
+              <div class="cdot" style="background:#78350f" title="Toprak"></div>
+              <div class="cdot" style="background:#b45309" title="Rust"></div>
+              <div class="cdot" style="background:#e2bf84" title="Bej"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-4" data-cat="cushion">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=600&q=80" alt="Berber Yastık">
+          <div class="product-overlay">
+            <button class="product-add" onclick="addToCart(this)">🛍️ Sepete Ekle</button>
+          </div>
+          <div class="product-badges"><span class="badge-pill badge-new">Yeni</span></div>
+          <button class="like-btn" onclick="toggleLike(this)">🤍</button>
+        </div>
+        <div class="product-body">
+          <div class="product-meta">
+            <span class="product-cat">Yastık</span>
+            <span class="product-origin">📍 Güneydoğu</span>
+          </div>
+          <div class="product-name">Berber Yastık Seti — 2'li</div>
+          <div class="product-dim">📏 45 × 45 cm</div>
+          <div class="product-mats"><span class="mat-tag">Yün</span><span class="mat-tag">Sumak</span></div>
+          <div class="product-footer">
+            <div>
+              <div class="price-try">₺1.800</div>
+              <div class="price-usd">≈ $59</div>
+            </div>
+            <div class="color-dots">
+              <div class="cdot" style="background:#18171a" title="Siyah"></div>
+              <div class="cdot" style="background:#dc2626" title="Kırmızı"></div>
+              <div class="cdot" style="background:#e2bf84" title="Bej"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-5" data-cat="vintage">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" alt="Vintage Anadolu">
+          <div class="product-overlay">
+            <button class="product-add" onclick="addToCart(this)">🛍️ Sepete Ekle</button>
+          </div>
+          <div class="product-badges"><span class="badge-pill badge-vintage">Vintage</span></div>
+          <button class="like-btn" onclick="toggleLike(this)">🤍</button>
+        </div>
+        <div class="product-body">
+          <div class="product-meta">
+            <span class="product-cat">Vintage</span>
+            <span class="product-origin">📍 Anadolu</span>
+          </div>
+          <div class="product-name">Vintage Anadolu — Büyük Boy</div>
+          <div class="product-dim">📏 240 × 340 cm</div>
+          <div class="product-mats"><span class="mat-tag">Yün</span><span class="mat-tag">Doğal Boya</span></div>
+          <div class="product-footer">
+            <div>
+              <div class="price-try">₺32.000</div>
+              <div class="price-usd">≈ $1.050</div>
+            </div>
+            <div class="color-dots">
+              <div class="cdot" style="background:#3730a3" title="İndigo"></div>
+              <div class="cdot" style="background:#16a34a" title="Fıstık"></div>
+              <div class="cdot" style="background:#dc2626" title="Kırmızı"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CRAFT PROCESS -->
+<section class="craft" id="craft">
+  <div class="craft-glow1"></div>
+  <div class="craft-glow2"></div>
+  <div class="craft-inner">
+    <div class="craft-head">
+      <div class="section-tag" style="color:#d97706;justify-content:center">Zanaat Hikayesi</div>
+      <h2 class="section-h2" style="color:#fff">Her Halı Bir <em class="text-gold" style="font-style:italic;font-weight:400">Yolculuk</em></h2>
+      <p class="section-desc" style="margin-top:14px">Ham yünden mükemmel bir esere uzanan süreç, yüzyıllık bilgi ve modern kalite anlayışının birleşimidir.</p>
+      <p class="craft-quote">"Her düğüm, ustalığın sessiz bir şahididir."</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-card reveal">
+        <div class="craft-num">01</div>
+        <div class="craft-emoji" style="background:linear-gradient(135deg,#10b981,#0d9488)">🌿</div>
+        <div class="craft-title">Ham Madde Seçimi</div>
+        <div class="craft-desc">Anadolu'nun farklı bölgelerinden el seçimiyle toplanan en kaliteli yünler ve doğal ipekler kullanılır.</div>
+      </div>
+      <div class="craft-card reveal reveal-delay-1">
+        <div class="craft-num">02</div>
+        <div class="craft-emoji" style="background:linear-gradient(135deg,#d4522a,#ea580c)">🎨</div>
+        <div class="craft-title">Doğal Boyama</div>
+        <div class="craft-desc">Bitki, maden ve böcek kökenli doğal boyalar kullanılarak renklere solmayan bir karakter kazandırılır.</div>
+      </div>
+      <div class="craft-card reveal reveal-delay-2">
+        <div class="craft-num">03</div>
+        <div class="craft-emoji" style="background:linear-gradient(135deg,#3b82f6,#4f46e5)">✏️</div>
+        <div class="craft-title">Desen Tasarımı</div>
+        <div class="craft-desc">Yüzyıllık motif şablonları esas alınarak her halı için eşsiz bir desen haritası çizilir.</div>
+      </div>
+      <div class="craft-card reveal reveal-delay-3">
+        <div class="craft-num">04</div>
+        <div class="craft-emoji" style="background:linear-gradient(135deg,#d97706,#f59e0b)">🧵</div>
+        <div class="craft-title">El Dokuma</div>
+        <div class="craft-desc">Ustalar tarafından el tezgahında düğüm düğüm dokunur. Bir m² için haftalar harcanabilir.</div>
+      </div>
+      <div class="craft-card reveal reveal-delay-4">
+        <div class="craft-num">05</div>
+        <div class="craft-emoji" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed)">🔍</div>
+        <div class="craft-title">Kalite Kontrolü</div>
+        <div class="craft-desc">Her parça ustalar tarafından incelenir; düzensizlikler tek tek el ile giderilir.</div>
+      </div>
+      <div class="craft-card reveal reveal-delay-5">
+        <div class="craft-num">06</div>
+        <div class="craft-emoji" style="background:linear-gradient(135deg,#06b6d4,#3b82f6)">💧</div>
+        <div class="craft-title">Yıkama & Kurutma</div>
+        <div class="craft-desc">Geleneksel yöntemlerle yıkanan halılar güneşte kurutulur; renk ve doku mükemmelleşir.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGIONAL MAP -->
+<section class="regional" id="regional">
+  <div class="regional-inner">
+    <div class="regional-head">
+      <div class="section-tag">Bölgesel Koleksiyonlar</div>
+      <h2 class="section-h2">Türkiye'nin Dokuma <span class="text-terra italic font-normal">Merkezleri</span></h2>
+      <p class="section-desc" style="margin-top:12px">Her bölge, kendine özgü teknik ve motif anlayışıyla yüzyıllardır dokuma sanatını yaşatmaktadır.</p>
+    </div>
+    <div class="regional-grid">
+      <div class="region-list" id="region-list">
+        <button class="region-btn active" onclick="selectRegion(this,0)" style="text-align:left;width:100%">
+          <div class="region-dot" style="background:#d4522a"></div>
+          <div style="flex:1">
+            <div class="region-name">Hereke</div>
+            <span class="region-spec" style="background:#d4522a">İpek Halı</span>
+          </div>
+          <div class="region-count">18 parça</div>
+        </button>
+        <button class="region-btn" onclick="selectRegion(this,1)">
+          <div class="region-dot" style="background:#b45309"></div>
+          <div style="flex:1">
+            <div class="region-name">Uşak</div>
+            <span class="region-spec" style="background:#b45309">Yün Halı</span>
+          </div>
+          <div class="region-count">24 parça</div>
+        </button>
+        <button class="region-btn" onclick="selectRegion(this,2)">
+          <div class="region-dot" style="background:#0f766e"></div>
+          <div style="flex:1">
+            <div class="region-name">Konya</div>
+            <span class="region-spec" style="background:#0f766e">Kilim</span>
+          </div>
+          <div class="region-count">31 parça</div>
+        </button>
+        <button class="region-btn" onclick="selectRegion(this,3)">
+          <div class="region-dot" style="background:#7c3aed"></div>
+          <div style="flex:1">
+            <div class="region-name">Gaziantep</div>
+            <span class="region-spec" style="background:#7c3aed">Sumak</span>
+          </div>
+          <div class="region-count">15 parça</div>
+        </button>
+        <button class="region-btn" onclick="selectRegion(this,4)">
+          <div class="region-dot" style="background:#0369a1"></div>
+          <div style="flex:1">
+            <div class="region-name">Kayseri</div>
+            <span class="region-spec" style="background:#0369a1">İpek Kilim</span>
+          </div>
+          <div class="region-count">12 parça</div>
+        </button>
+      </div>
+      <div class="region-detail" id="region-detail">
+        <div class="region-img">
+          <img id="region-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="">
+          <div class="region-img-overlay"></div>
+          <div class="region-img-content">
+            <div>
+              <div class="region-img-title" id="region-title">Hereke</div>
+              <div class="region-img-city" id="region-city">Kocaeli, Türkiye</div>
+            </div>
+            <span class="region-spec" id="region-spec-badge" style="background:rgba(212,82,42,.8)">İpek Halı</span>
+          </div>
+        </div>
+        <div class="region-body">
+          <p id="region-desc">Osmanlı saray geleneğinin devamı. Milyonlarca düğüm/m² yoğunluğuyla dünyanın en ince halıları burada dokunur.</p>
+          <div class="region-stats">
+            <div class="region-stat-box"><div class="rsb-num" id="region-count2">18</div><div class="rsb-label">Koleksiyondaki Parça</div></div>
+            <div class="region-stat-box"><div class="rsb-num">Özgün</div><div class="rsb-label">Her Parça Eşsiz</div></div>
+          </div>
+          <button class="region-cta" id="region-cta">Hereke Koleksiyonu →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-inner">
+    <div>
+      <div class="section-tag">Müşteri Yorumları</div>
+      <h2 class="section-h2">Dünyadan <span class="text-terra italic font-normal">Sesler</span></h2>
+      <p class="section-desc" style="margin-top:12px">68 ülkeden müşterilerimiz, Anadolu el sanatının mükemmeliyetini yaşıyor ve bizimle paylaşıyor.</p>
+      <div class="test-stats">
+        <div class="test-stat"><div class="test-stat-num">4.9/5</div><div class="test-stat-label">Ortalama Puan</div></div>
+        <div class="test-stat"><div class="test-stat-num">850+</div><div class="test-stat-label">Müşteri Yorumu</div></div>
+        <div class="test-stat"><div class="test-stat-num">98%</div><div class="test-stat-label">Memnuniyet</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="test-card" id="test-card">
+        <div class="test-quote-icon">"</div>
+        <p class="test-text" id="test-text">I ordered the Hereke silk carpet for our living room. The quality is absolutely extraordinary — the silk shimmers in different lights. Shipped within 3 days to London. Highly recommend!</p>
+        <div class="test-footer">
+          <div class="test-author">
+            <img id="test-img" src="https://i.pravatar.cc/80?img=47" alt="">
+            <div>
+              <div class="test-name"><span id="test-name">Emma Richardson</span> <span id="test-flag">🇬🇧</span></div>
+              <div class="test-location" id="test-loc">London, UK</div>
+              <div class="test-product" id="test-product">Hereke İpek Halısı</div>
+            </div>
+          </div>
+          <div>
+            <div class="test-stars">★★★★★</div>
+            <div style="font-size:10px;color:#908980;margin-top:3px">Doğrulanmış Alışveriş</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-nav">
+        <button class="test-dot active" onclick="goTest(0)"></button>
+        <button class="test-dot" onclick="goTest(1)"></button>
+        <button class="test-dot" onclick="goTest(2)"></button>
+        <button class="test-dot" onclick="goTest(3)"></button>
+        <div class="test-arrows">
+          <button class="test-arrow" onclick="prevTest()">←</button>
+          <button class="test-arrow" onclick="nextTest()">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="instagram">
+  <div class="instagram-inner">
+    <div class="instagram-head">
+      <div class="insta-handle">📸 @anadolu_hali</div>
+      <h2 class="section-h2">Instagram'dan <span class="text-terra italic font-normal">İlham Al</span></h2>
+    </div>
+    <div class="insta-grid">
+      <div class="insta-item reveal"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80" alt=""><div class="insta-item-overlay"><span class="insta-stat">❤️ 1.2k</span><span class="insta-stat">💬 34</span></div></div>
+      <div class="insta-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1588362951121-3ee319b018b2?w=400&q=80" alt=""><div class="insta-item-overlay"><span class="insta-stat">❤️ 890</span><span class="insta-stat">💬 21</span></div></div>
+      <div class="insta-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt=""><div class="insta-item-overlay"><span class="insta-stat">❤️ 2.1k</span><span class="insta-stat">💬 67</span></div></div>
+      <div class="insta-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1567225591450-06036b3392a6?w=400&q=80" alt=""><div class="insta-item-overlay"><span class="insta-stat">❤️ 743</span><span class="insta-stat">💬 15</span></div></div>
+      <div class="insta-item reveal reveal-delay-4"><img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=400&q=80" alt=""><div class="insta-item-overlay"><span class="insta-stat">❤️ 1.5k</span><span class="insta-stat">💬 42</span></div></div>
+      <div class="insta-item reveal reveal-delay-5"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&q=80" alt=""><div class="insta-item-overlay"><span class="insta-stat">❤️ 988</span><span class="insta-stat">💬 28</span></div></div>
+    </div>
+    <div class="insta-center">
+      <a href="#" class="insta-follow">📸 Instagram'da Takip Et</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-newsletter">
+    <div class="footer-nl-inner">
+      <div>
+        <div class="footer-nl-title">Yeni Koleksiyonlardan<br><span>Haberdar Olun</span></div>
+        <p class="footer-nl-desc" style="margin-top:8px">El sanatı dünyasından haberler ve özel teklifler için abone olun.</p>
+      </div>
+      <form onsubmit="return false">
+        <div class="nl-form">
+          <input class="nl-input" type="email" placeholder="E-posta adresiniz">
+          <button class="nl-btn" type="submit">Abone Ol →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="footer-main">
+    <div class="footer-main-inner">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <div style="width:32px;height:32px;background:#d4522a;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',serif;font-weight:700">A</div>
+          <div>
+            <div class="footer-logo-name">ANADOLU</div>
+            <div class="footer-logo-sub">El Dokuma Halı</div>
+          </div>
+        </div>
+        <p class="footer-desc">Türkiye'nin köklü dokuma geleneğini yaşatarak dünya pazarına sunuyoruz. Her halı bir hikaye, her kilim bir miras.</p>
+        <div class="footer-socials">
+          <a class="social-btn" href="#">📷</a>
+          <a class="social-btn" href="#">👍</a>
+          <a class="social-btn" href="#">▶️</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Koleksiyon</div>
+        <div class="footer-links">
+          <a href="#">Kilimler</a>
+          <a href="#">El Halıları</a>
+          <a href="#">Runner & Yolluk</a>
+          <a href="#">Yastık & Aksesuar</a>
+          <a href="#">Vintage & Antika</a>
+          <a href="#">Tüm Ürünler</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Bilgi</div>
+        <div class="footer-links">
+          <a href="#">Hakkımızda</a>
+          <a href="#">Dokuma Sürecimiz</a>
+          <a href="#">Bakım Rehberi</a>
+          <a href="#">Kargo & İade</a>
+          <a href="#">Gizlilik Politikası</a>
+          <a href="#">Kullanım Koşulları</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">İletişim</div>
+        <div class="contact-item"><span class="contact-icon">📍</span><span>Kapalıçarşı, Nuruosmaniye Cad. No: 14, Beyazıt — İstanbul</span></div>
+        <div class="contact-item"><span class="contact-icon">📞</span><a href="tel:+902125550100" style="color:#756e64;text-decoration:none">+90 212 555 0100</a></div>
+        <div class="contact-item"><span class="contact-icon">✉️</span><a href="mailto:info@anadolu.com" style="color:#756e64;text-decoration:none">info@anadolu.com</a></div>
+        <div class="store-hours">
+          <div class="store-hours-label">Mağaza Saatleri</div>
+          <div class="store-hours-time">Pzt–Cmt: 09:00–19:00</div>
+          <div class="store-hours-time">Pazar: 10:00–17:00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <div class="footer-copy">© 2024 ANADOLU El Dokuma Halı. Tüm hakları saklıdır.</div>
+      <div class="footer-flags"><span>🇹🇷 Türkiye'de Üretildi</span><span>·</span><span>🌍 Dünyaya Kargo</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div id="toast" style="position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:#18171a;color:#fff;padding:14px 28px;border-radius:999px;font-size:14px;font-weight:500;z-index:999;opacity:0;transition:all .35s;pointer-events:none;display:flex;align-items:center;gap:8px;box-shadow:0 8px 30px rgba(0,0,0,.3)"></div>
+
+<script>
+// SCROLL REVEAL
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// TOAST
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.innerHTML=msg;t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';
+  setTimeout(()=>{t.style.opacity='0';t.style.transform='translateX(-50%) translateY(80px)'},2500);
+}
+
+// LIKE
+function toggleLike(btn){
+  if(btn.classList.contains('liked')){btn.classList.remove('liked');btn.textContent='🤍';}
+  else{btn.classList.add('liked');btn.textContent='❤️';showToast('❤️ Favorilere eklendi');}
+}
+
+// ADD TO CART
+function addToCart(btn){
+  const orig=btn.textContent;
+  btn.textContent='✓ Eklendi!';
+  btn.style.background='#22c55e';btn.style.color='#fff';
+  setTimeout(()=>{btn.textContent=orig;btn.style.background='';btn.style.color='';},1800);
+  showToast('🛍️ Sepete eklendi');
+}
+
+// FILTER
+function filterProducts(btn,cat){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.product-card').forEach(card=>{
+    if(cat==='all'||card.dataset.cat===cat){card.style.display='';card.style.animation='fadeUp .5s ease both';}
+    else{card.style.display='none';}
+  });
+}
+
+// REGIONAL
+const regions=[
+  {name:'Hereke',city:'Kocaeli',spec:'İpek Halı',color:'#d4522a',count:18,img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',desc:'Osmanlı saray geleneğinin devamı. Milyonlarca düğüm/m² yoğunluğuyla dünyanın en ince halıları burada dokunur.'},
+  {name:'Uşak',city:'Uşak',spec:'Yün Halı',color:'#b45309',count:24,img:'https://images.unsplash.com/photo-1588362951121-3ee319b018b2?w=800&q=80',desc:'Asırlık Uşak dokuma okulu. Soft renk paletleri ve görkemli madalyon desenleriyle tanınan halılar.'},
+  {name:'Konya',city:'Konya',spec:'Kilim',color:'#0f766e',count:31,img:'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',desc:'Düz dokuma kilimin merkezi. Geometrik motifler ve geleneksel sembollerle bezenmiş özgün parçalar.'},
+  {name:'Gaziantep',city:'Gaziantep',spec:'Sumak',color:'#7c3aed',count:15,img:'https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=800&q=80',desc:'Güneydoğu Anadolu\'nun zengin dokusu. Sumak ve cicim tekniğiyle üretilen yıldız motifleri.'},
+  {name:'Kayseri',city:'Kayseri',spec:'İpek Kilim',color:'#0369a1',count:12,img:'https://images.unsplash.com/photo-1567225591450-06036b3392a6?w=800&q=80',desc:'Hem ticaret hem zanaat şehri. İpek kilim ve bukağılı halılarıyla tanınan İç Anadolu merkezi.'},
+];
+function selectRegion(btn,idx){
+  document.querySelectorAll('.region-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const r=regions[idx];
+  document.getElementById('region-img').src=r.img;
+  document.getElementById('region-title').textContent=r.name;
+  document.getElementById('region-city').textContent=r.city+', Türkiye';
+  document.getElementById('region-spec-badge').textContent=r.spec;
+  document.getElementById('region-spec-badge').style.background='rgba('+hexToRgb(r.color)+',.8)';
+  document.getElementById('region-desc').textContent=r.desc;
+  document.getElementById('region-count2').textContent=r.count;
+  document.getElementById('region-cta').textContent=r.name+' Koleksiyonu →';
+}
+function hexToRgb(hex){const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);return r+','+g+','+b;}
+
+// TESTIMONIALS
+const tests=[
+  {text:'I ordered the Hereke silk carpet for our living room. The quality is absolutely extraordinary — the silk shimmers in different lights. Shipped within 3 days to London. Highly recommend!',name:'Emma Richardson',flag:'🇬🇧',loc:'London, UK',product:'Hereke İpek Halısı',img:'https://i.pravatar.cc/80?img=47'},
+  {text:'Annem için geleneksel bir kilim aldım. Harika paketleme, mükemmel kalite. Tam tanımlandığı gibi geldi. Anadolu\'nun ruhunu Berlin\'e taşıdım. Teşekkürler!',name:'Mehmet Kaya',flag:'🇩🇪',loc:'Berlin, Almanya',product:'Anadolu Kilim',img:'https://i.pravatar.cc/80?img=12'},
+  {text:"J'ai acheté deux kilims pour notre boutique à Paris. Mes clients les adorent! La qualité est incomparable. Je reviendrai pour une commande plus importante.",name:'Sophie Laurent',flag:'🇫🇷',loc:'Paris, Fransa',product:'Konya Kilim Seti',img:'https://i.pravatar.cc/80?img=29'},
+  {text:'Third purchase from Anadolu and every time better than the last. Their vintage selection is curated with genuine expertise. A true treasure.',name:'James Park',flag:'🇺🇸',loc:'New York, ABD',product:'Vintage Anadolu Halısı',img:'https://i.pravatar.cc/80?img=33'},
+];
+let curTest=0;
+function goTest(idx){
+  curTest=idx;
+  const t=tests[idx];
+  const card=document.getElementById('test-card');
+  card.style.opacity='0';card.style.transform='translateX(20px)';
+  setTimeout(()=>{
+    document.getElementById('test-text').textContent=t.text;
+    document.getElementById('test-name').textContent=t.name;
+    document.getElementById('test-flag').textContent=t.flag;
+    document.getElementById('test-loc').textContent=t.loc;
+    document.getElementById('test-product').textContent=t.product;
+    document.getElementById('test-img').src=t.img;
+    card.style.opacity='1';card.style.transform='translateX(0)';
+  },200);
+  document.querySelectorAll('.test-dot').forEach((d,i)=>{d.classList.toggle('active',i===idx);});
+}
+function nextTest(){goTest((curTest+1)%tests.length);}
+function prevTest(){goTest((curTest-1+tests.length)%tests.length);}
+setInterval(nextTest,5000);
+</script>
+</body>
+</html>
